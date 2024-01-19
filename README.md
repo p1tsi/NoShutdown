@@ -15,6 +15,8 @@ To have a try with different iPhones/iOS version:
 
 'shutdown.log' file should not contain any trace of 'no_shutdown' process.  
 
+On the other hand, compiling 'no_shutdown.m' commenting out the ```CFNotificationCenterAddObserver``` function and reproducing the steps should result in 'shutdown.log' file contaning the log for 'no_shutdown' process.
+
 Note that running a binary directly from ssh shell won't be useful, because presumably the os kindly shuts down the ssh process before rebooting, resulting in our process not logged.
 So I tried to create two binaries: 'no_shutdown' (representing a malicious implant) and a 'launcher' that simply posix_spawns the first one and exits.
 
