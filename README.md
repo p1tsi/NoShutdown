@@ -13,7 +13,7 @@ To have a try with different iPhones/iOS version:
 3. Execute the launcher from an ssh shell
 4. Reboot the phone
 
-'shutdown.log' file should not contain any trace of 'no_shutdown' process.  
+'shutdown.log' file should not contain any evidence of 'no_shutdown' process.  
 
 On the other hand, compiling 'no_shutdown.m' commenting out the ```CFNotificationCenterAddObserver``` function and reproducing the steps should result in 'shutdown.log' file contaning the log for 'no_shutdown' process.
 
